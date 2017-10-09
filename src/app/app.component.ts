@@ -6,8 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  ckeditorContent:String='';
+  ckeditorContent:string='';
   constructor(){
     this.ckeditorContent = `<p>My HTML</p>`;
+  }
+
+  getData(){
+    console.log(this.ckeditorContent);
+    document.getElementById('test').innerHTML=this.ckeditorContent;
   }
 }
